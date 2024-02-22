@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DeleteIcon from "./icons/DeleteIcon";
 import EditIcon from "./icons/EditIcon";
 
@@ -13,6 +13,14 @@ export default function TodoListItem({ todo , deleteTodo , toggleTodoStatus , ed
             setEditMode(false);
         }
     }
+
+    useEffect(() => {
+        console.log(`the component created! => ${todo.title}`);
+
+        return () => {
+            console.log(`the component deleted! => ${todo.title}`);
+        }
+    },[])
 
     return (
         <li className="relative dec flex items-center justify-between px-2 py-6 border-b">
