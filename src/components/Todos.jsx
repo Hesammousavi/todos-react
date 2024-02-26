@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import TodoList from "./TodoList";
 import { v4 as uuidv4 } from 'uuid';
 import NewTodoInput from "./NewTodoInput";
-import customEffect from "../hooks/customEffect";
 
 export default function Todos() {
     const [ todos , setTodos ] = useState([]);
