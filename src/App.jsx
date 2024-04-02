@@ -1,19 +1,17 @@
 import { useEffect } from "react"
 import Todos from "./components/Todos"
-import { UserContext } from "./contexts/UserContext"
+import Header from './components/layouts/Header'
+import Footer from './components/layouts/Footer'
+import AppLayout from "./components/layouts/AppLayout"
 
 function App() {
-    let user = { name : 'hesam mousavi'}
+
 
 
   return (
-    <>
-        <div className="bg-gray-100">
-            <UserContext.Provider value={user} >
-                <Todos />
-            </UserContext.Provider>
-        </div>
-    </>
+    <AppLayout>
+        <Todos />
+    </AppLayout>
   )
 }
 
