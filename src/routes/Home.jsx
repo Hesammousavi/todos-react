@@ -5,7 +5,7 @@ import Header from "../components/layouts/Header";
 export default function Home({}) {
     return (
 
-            <h2>Home Page</h2>
+            <h2>the new Home Page</h2>
 
     )
 }
